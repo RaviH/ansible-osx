@@ -1,0 +1,64 @@
+---
+cache_dir: ~/Library/Caches/battleschool
+
+sources:
+  git:
+    - name: 'osx'
+      repo: 'https://github.com/RaviH/ansible-osx.git'
+      playbooks:
+# Required for rest to function
+         - homebrew.yml   # Needed for others in the list below
+         - cask.yml       # Needed for others in the list below
+         - gvm.yml        # Needed for others in the list below     
+         - java7.yml
+         - java8.yml
+         - charter.yml
+# Listed in alphabetical order. Uncomment the one you want to install
+# (by removing the pound sybmol)
+#        - adium.yml
+#        - alfred.yml
+#        - android-studio.yml
+#        - ant.yml
+#        - atom.yml
+#        - better-touch-tool.yml
+#        - cassandra.yml
+#        - chrome-stable.yml
+#        - dropbox.yml
+#        - evernote.yml
+#        - fantastical.yml
+#        - flux.yml
+#        - git.yml
+#        - github.yml
+#        - gitx.yml
+#        - groovy.yml
+#        - handbrake.yml
+#        - intellij-idea-ultimate12.yml
+#        - intellij-idea-ultimate13.yml
+#        - istat-menus.yml
+#        - iterm2.yml
+#        - kaleidoscope.yml
+#        - libreoffice.yml
+#        - macports.yml
+#        - macvim.yml
+#        - maven.yml
+#        - mou.yml
+#        - mysql.yml
+#        - notational-velocity.yml
+#        - python.yml
+#        - ruby.yml
+#        - sequel-pro.yml
+#        - skype.yml
+#        - spectacle.yml
+#        - sublime2.yml
+#        - sublime3.yml
+#        - tomcat.yml
+#        - total-terminal.yml
+#        - tower.yml
+#        - transmit.yml
+#        - truecrypt.yml
+#        - usb-overdrive.yml
+#        - vagrant.yml
+#        - virtualbox.yml
+#        - webstorm.yml
+#        - wget.yml
+#        - xtra-finder.yml

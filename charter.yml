@@ -1,0 +1,15 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: Clone ws-main
+      git: repo=ssh://git@stash.dev-charter.net:7999/sad/ws-main.git
+           dest=~/workspace/ws-main
+           accept_hostkey=True
+           clone=no
+
+    - name: Copy bash_profile
+      template: src=bash_profile_charter.j2 dest=~/.bash_profile_charter mode=0644
+
+    - name: Copy bashrc
+      template: src=bashrc.j2 dest=~/.bashrc_charter mode=0644
